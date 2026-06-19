@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝑨𝑹𝑨𝑺𝑯𝑰⊰⛈️⊱𝑩𝑨𝑵𝑲 ❤️‍🩹</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        :root { 
+            --neon-color: #00f2ff; 
+            --neon-glow: 0 0 25px #00f2ff, inset 0 0 15px #00f2ff;
+            --btn-glow: 0 4px 15px rgba(0, 242, 255, 0.6);
+            --btn-hover-glow: 0 0 35px #00f2ff, 0 8px 25px rgba(0, 242, 255, 0.8);
+            --glass: rgba(10, 25, 50, 0.85); 
+            --card-border: rgba(0, 242, 255, 0.6);
+            --card-glow: rgba(0, 242, 255, 0.4);
+            --price-bg: linear-gradient(90deg, #00f2ff, #0066ff);
+            --bank-bg: linear-gradient(135deg, rgba(0, 242, 255, 0.15), rgba(0, 102, 255, 0.3)), url('img.2') no-repeat center center;
+            --bank-bg-size: cover;
+        }
+        
+        /* الثيم البناتي الوردي الشامل والورود */
+        body.theme-girl {
+            --neon-color: #ff69b4;
+            --neon-glow: 0 0 25px #ff69b4, inset 0 0 15px #ff69b4;
+            --btn-glow: 0 4px 15px rgba(255, 105, 180, 0.6);
+            --btn-hover-glow: 0 0 35px #ff69b4, 0 8px 25px rgba(255, 105, 180, 0.8);
+            --glass: rgba(50, 10, 30, 0.85);
+            --card-border: rgba(255, 105, 180, 0.7);
+            --card-glow: rgba(255, 105, 180, 0.5);
+            --price-bg: linear-gradient(90deg, #ff69b4, #ff1493);
+            --bank-bg: linear-gradient(135deg, rgba(255, 105, 180, 0.2), rgba(255, 20, 147, 0.35)), url('img.1') no-repeat center center;
+            --bank-bg-size: cover;
+        }
+        
+        body, html { margin: 0; padding: 0; min-height: 100%; width: 100%; font-family: 'Segoe UI', sans-serif; overflow-x: hidden; transition: 0.5s; background: #1a1a1a; }
+        .bg-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('https://images.alphacoders.com/132/1322502.jpeg') no-repeat center center fixed; background-size: cover; z-index: -2; filter: brightness(0.35); transition: filter 0.5s; }
+        
+        body.theme-girl .bg-overlay { filter: brightness(0.5) sepia(0.1) hue-rotate(120deg); }
+
+        #login-screen { position: relative; overflow: hidden; }
+        .snow-particle { position: absolute; background: white; border-radius: 50%; pointer-events: none; opacity: 0.7; animation: fall linear infinite; }
+        body.theme-girl .snow-particle { background: #ffb6c1; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+        body.theme-girl .snow-particle::after { content: '🌸'; font-size: 10px; }
+        
+        @keyframes fall {
+            0% { transform: translateY(-10px) translateX(0); opacity: 1; }
+            100% { transform: translateY(100vh) translateX(20px); opacity: 0; }
+        }
+
+        #loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: black; display: flex; justify-content: center; align-items: center; z-index: 9999; color: var(--neon-color); font-size: 24px; }
+        .container-wrapper { width: 95%; max-width: 500px; margin: auto; padding: 20px 10px; box-sizing: border-box; }
+        .login-container { display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 90vh; }
+        
+        .neon-box { background: var(--glass); padding: 25px; border-radius: 20px; border: 2px solid var(--neon-color); box-shadow: var(--neon-glow); text-align: center; color: white; margin-bottom: 20px; width: 100%; box-sizing: border-box; backdrop-filter: blur(10px); transition: all 0.5s; position: relative; z-index: 10; }
+        
+        /* تعديل البنك ليناسب الثيم ويتناسق مع الصور */
+        .bank-box-adapted {
+            background: var(--bank-bg) !important;
+            background-size: var(--bank-bg-size) !important;
+            border: 2px solid var(--neon-color) !important;
+            box-shadow: var(--neon-glow) !important;
+        }
+
+        .input-group { position: relative; width: 100%; max-width: 280px; margin: 15px auto; z-index: 15; }
+        .neon-input { display: block; width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--neon-color); border-radius: 8px; color: white; text-align: center; outline: none; box-sizing: border-box; transition: all 0.4s ease; box-shadow: 0 0 5px rgba(0, 242, 255, 0.2); position: relative; z-index: 15; }
+        .neon-input:focus { border-color: #ff00ff; box-shadow: 0 0 20px #ff00ff, inset 0 0 8px #ff00ff; background: rgba(255,255,255,0.15); transform: scale(1.03); }
+        
+        .toggle-pass { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--neon-color); cursor: pointer; z-index: 20; }
+        
+        /* إبراز الأزرار وجعلها مجسمة */
+        .neon-btn { padding: 12px 30px; background: #111; color: var(--neon-color); border: 2px solid var(--neon-color); border-radius: 10px; cursor: pointer; font-weight: bold; box-shadow: var(--btn-glow); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); margin: 5px; display: inline-block; text-decoration: none; position: relative; z-index: 100; transform: translateZ(0); }
+        .neon-btn:hover { background: var(--neon-color); color: black; box-shadow: var(--btn-hover-glow); transform: translateY(-3px) scale(1.05); z-index: 105; }
+        .neon-btn:active { transform: translateY(1px); }
+        
+        .top-controls { position: fixed; top: 15px; left: 15px; z-index: 3000; display: flex; gap: 10px; }
+        .theme-btn { padding: 8px 12px; border-radius: 15px; border: none; cursor: pointer; font-weight: bold; font-size: 12px; transition: all 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.3); position: relative; z-index: 3100; }
+        .theme-btn:hover { transform: scale(1.1); }
+        
+        #main-app { display: none; padding-bottom: 100px; }
+        .section { display: none; animation: fadeIn 0.5s; }
+        .active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        
+        /* بطاقة العضوية البنكية التفاعلية */
+        .mada-card { width: 100%; max-width: 350px; height: 190px; background: rgba(255, 255, 255, 0.07); border-radius: 15px; margin: 10px auto 25px; padding: 20px; color: white; position: relative; box-shadow: 0 0 25px var(--card-glow); border: 1px solid var(--card-border); box-sizing: border-box; backdrop-filter: blur(12px); overflow: hidden; transition: transform 0.3s ease, border 0.5s, box-shadow 0.5s; z-index: 10; }
+        .mada-card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent); transform: rotate(45deg); animation: cardShine 4s linear infinite; }
+        @keyframes cardShine { 0% { transform: translateX(-100%) rotate(45deg); } 100% { transform: translateX(100%) rotate(45deg); } }
+        
+        .history-list, .top-list { text-align: right; margin-top: 15px; max-height: 200px; overflow-y: auto; font-size: 14px; }
+        .history-item, .top-item { padding: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; }
+        
+        .top-item:nth-child(1) { background: linear-gradient(90deg, rgba(255,215,0,0.15), transparent); border: 1px solid #ffd700; border-radius: 8px; box-shadow: 0 0 15px #ffd700, inset 0 0 5px #ffd700; animation: pulseGlowGold 2s infinite alternate; }
+        .top-item:nth-child(2) { background: linear-gradient(90deg, rgba(192,192,192,0.15), transparent); border: 1px solid #c0c0c0; border-radius: 8px; box-shadow: 0 0 12px #c0c0c0, inset 0 0 4px #c0c0c0; }
+        .top-item:nth-child(3) { background: linear-gradient(90deg, rgba(205,127,50,0.15), transparent); border: 1px solid #cd7f32; border-radius: 8px; box-shadow: 0 0 10px #cd7f32, inset 0 0 3px #cd7f32; }
+        @keyframes pulseGlowGold { 0% { box-shadow: 0 0 10px #ffd700; } 100% { box-shadow: 0 0 22px #ffd700; } }
+
+        .history-top { display: flex; justify-content: space-between; width: 100%; cursor: pointer; }
+        .val-plus { color: #00ff88; }
+        .val-minus { color: #ff4d4d; }
+        
+        /* شريط التنقل السفلي المتناسق مع الألوان */
+        .bottom-nav { position: fixed; bottom: 0; width: 100%; background: #000; display: flex; justify-content: space-around; padding: 10px 0; border-top: 2px solid var(--neon-color); z-index: 2500; left:0; transition: border 0.5s; }
+        .nav-item { color: #888; background: none; border: none; cursor: pointer; text-align: center; font-size: 12px; transition: all 0.3s ease; opacity: 0.7; position: relative; z-index: 2550; }
+        .nav-item.active-nav { color: var(--neon-color) !important; text-shadow: 0 0 15px var(--neon-color); transform: translateY(-5px); opacity: 1; font-weight: bold; }
+        
+        /* متجر الأوتاكو */
+        .shop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; perspective: 1000px; }
+        .shop-item { background: linear-gradient(145deg, rgba(20,20,35,0.95), rgba(5,5,15,0.98)); border: 2px solid var(--neon-color); border-radius: 12px; padding: 15px; position: relative; text-align: center; cursor: pointer; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); transform-style: preserve-3d; transform: translateZ(0); box-shadow: 0 4px 15px rgba(0,0,0,0.5); overflow: hidden; z-index: 10; }
+        body.theme-girl .shop-item { background: linear-gradient(145deg, rgba(45,20,35,0.95), rgba(20,5,15,0.98)); }
+        .shop-item:hover { border-color: #ff00ff; box-shadow: 0 0 25px rgba(255,0,255,0.4); }
+        .shop-item::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(60deg, transparent, rgba(255,255,255,0.1), transparent); transform: rotate(30deg); transition: 0.5s; }
+        .shop-item:hover::after { transform: translate(50%, 50%) rotate(30deg); }
+        .shop-price-badge { background: var(--price-bg); color: black; padding: 3px 8px; border-radius: 20px; font-weight: bold; font-size: 11px; display: inline-block; margin-top: 8px; box-shadow: 0 0 10px var(--neon-color); transition: all 0.5s; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 13px; }
+        th, td { padding: 8px; border-bottom: 1px solid #333; text-align: center; color: white; }
+        .status-badge { padding: 4px 8px; border-radius: 10px; font-size: 10px; font-weight: bold; }
+        .pending { background: orange; color: black; }
+        .approved { background: #00ff88; color: black; }
+        .rejected { background: #ff4d4d; color: white; }
+        #banner { background: white !important; border: 3px solid #d4af37 !important; color: #b8860b !important; font-weight: 900 !important; font-size: 1.2em; text-align: center; padding: 15px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .info-text { margin-top: 20px !important; font-size: 13px !important; color: #888888 !important; font-style: italic !important; text-align: center !important; border-top: 1px solid rgba(255, 255, 255, 0.1) !important; padding-top: 15px !important; display: block !important; }
+         
+        .search-results-box { max-height: 150px; overflow-y: auto; background: rgba(0,0,0,0.9); border: 1px solid var(--neon-color); border-radius: 8px; margin-top: -10px; margin-bottom: 15px; text-align: right; display: none; z-index: 200; position: relative; }
+        .search-res-item { padding: 10px; color: white; cursor: pointer; border-bottom: 1px solid #222; }
+        .search-res-item:hover { background: var(--neon-color); color: black; }
+         
+        .custom-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 5000; justify-content: center; align-items: center; padding: 15px; box-sizing: border-box; backdrop-filter: blur(5px); }
+        .modal-content { background: #0d1b2a; border: 2px solid var(--neon-color); border-radius: 20px; padding: 20px; width: 100%; max-width: 400px; color: white; position: relative; box-shadow: 0 0 30px var(--neon-color); text-align: center; max-height: 90vh; overflow-y: auto; transition: all 0.5s; z-index: 5100; }
+        body.theme-girl .modal-content { background: #2b1020; }
+        .close-modal { position: absolute; top: 10px; left: 10px; color: #ff4d4d; font-size: 20px; cursor: pointer; z-index: 5200; }
+         
+        .sub-tabs { display: flex; justify-content: space-around; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 5px; }
+        .sub-tab-btn { background: none; border: none; color: #888; font-weight: bold; cursor: pointer; padding: 5px 10px; font-size: 13px; }
+        .sub-tab-btn.active-sub { color: var(--neon-color); border-bottom: 2px solid var(--neon-color); }
+         
+        /* تصميم عجلة الحظ المحدثة بالكامل */
+        .wheel-outer-wrapper { position: relative; width: 240px; height: 240px; margin: 20px auto; }
+        .wheel-container { width: 100%; height: 100%; border: 6px solid white; border-radius: 50%; overflow: hidden; position: relative; transition: transform 4s cubic-bezier(0.15, 0.85, 0.15, 1); background: #222; box-shadow: 0 0 20px rgba(255,255,255,0.2); }
+        .wheel-pointer { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-top: 24px solid #ff4d4d; z-index: 100; filter: drop-shadow(0 2px 5px black); }
+        .wheel-segment { position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform-origin: 50% 50%; display: flex; justify-content: center; align-items: flex-start; padding-top: 15px; box-sizing: border-box; font-weight: bold; font-size: 12px; color: white; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+    </style>
+</head>
+<body id="bodyTag">
+    <div id="loader"> انتظروا شوي يا اوتاكو ⚔️⚡...</div>
+    <div class="bg-overlay"></div>
+
+    <div class="top-controls">
+        <button class="theme-btn" style="background: #00f2ff; color: #000;" onclick="setTheme('boy')">أزرق ⚔️🔥</button>
+        <button class="theme-btn" style="background: #ff69b4; color: #fff;" onclick="setTheme('girl')">زهري 🌸💕</button>
+        <button class="theme-btn" style="background: #333; color: #fff;" onclick="toggleMusic()"><i class="fas fa-music"></i></button>
+    </div>
+
+    <div id="musicPlayerWrap" style="display:none;">
+        <iframe id="ytPlayer" width="1" height="1" src="https://www.youtube.com/embed/sP7tY2PqRQc?enablejsapi=1" frameborder="0" allow="autoplay"></iframe>
+    </div>
+
+    <!-- شاشة تسجيل الدخول -->
+    <div id="login-screen" class="container-wrapper login-container">
+        <div id="banner" class="neon-box" style="border-color: #ffd700; color: #ffd700; margin-bottom: 20px;">
+            ⚜️ <span id="bannerText">جاري تحميل الإعلان...</span> ⚜️
+        </div>
+
+        <div class="neon-box">
+            <div style="font-size: 50px;">👑</div>
+            <h2>𝑨𝑹𝑨𝑺𝑯𝑰⊰⛈️⊱𝑩𝑨𝑵𝑲 👺</h2>
+            <input type="text" id="userIn" class="neon-input" style="margin: 15px auto;" placeholder="اسم المستخدم">
+            <div class="input-group">
+                <input type="password" id="passIn" class="neon-input" placeholder="كلمة المرور">
+                <i class="fas fa-eye toggle-pass" onclick="togglePassVis('passIn')"></i>
+            </div>
+            <button class="neon-btn" onclick="login()">دخول آمن</button>
+        </div>
+
+        <a href="https://wa.me/966574360046" target="_blank" class="neon-btn" style="border-color:#00ff88; color:#00ff88; margin-top: 5px;">
+            <i class="fab fa-whatsapp"></i> مطور البنك
+        </a>
+        
+        <a id="loginBankManagerBtn" href="https://wa.me/966000000000" target="_blank" class="neon-btn" style="border-color:#00ff88; color:#00ff88; width:85%; box-shadow: 0 0 15px #00ff88; margin-top: 8px;">
+            <i class="fab fa-whatsapp"></i> <span id="loginBankManagerBtnText">مسئول بنك اراشي اراشي يامي</span>
+        </a>
+
+        <p class="info-text">إذا لم يكن لديك حساب، يرجى التواصل مع الإدارة</p>
+        <p class="info-text">نتقبل كل اقتراحاتكم للتطوير بقدر المستطاع وكل ابلاغاتكم للاخطاء والمشاكل</p>
+        <p class="info-text">اداره كونوها الماليه ترحب بكم حقوق تطوير محفوضه 2026®</p>
+    </div>
+
+    <!-- التطبيق الرئيسي -->
+    <div id="main-app" class="container-wrapper">
+        
+        <!-- التبويب الأساسي: الرئيسية -->
+        <div id="tab-home" class="section active">
+            <div class="mada-card" id="interactiveMadaCard">
+                <div style="display:flex; justify-content:space-between"><span>mada</span><i class="fas fa-wifi"></i></div>
+                <div style="margin-top:30px; font-size:18px; letter-spacing:2px">**** **** **** <span id="cardLast">00</span></div>
+                <div style="margin-top:20px;">
+                    <small id="userNickShow">الاسم</small><br>
+                    <span style="font-size:26px; font-weight: bold; font-family: monospace;" id="userBalance">0</span> <small>بوينت🪙</small>
+                </div>
+                <div style="position: absolute; bottom: 10px; right: 15px; font-size: 11px; opacity: 0.6; font-weight: bold; letter-spacing: 1px;">ARASHI BANK</div>
+            </div>
+            
+            <div id="loanWarningBox" class="neon-box" style="display:none; border-color: #ff4d4d;">
+                <h4 style="margin:0; color:#ff4d4d;"><i class="fas fa-exclamation-triangle"></i> تنبيه القرض المالي</h4>
+                <div style="margin-top:10px; font-size:13px;">لقد أخذت قرضاً من أقل من 7 أيام. المتبقي للسداد سيتوقف تلقائياً من أي مبالغ واردة.</div>
+            </div>
+
+            <div id="userOrderStatus" class="neon-box" style="display:none; border-color: #ff9800;">
+                <h4 style="margin:0;"><i class="fas fa-shopping-bag"></i>تنبيه الطلبات</h4>
+                <div id="orderStatusMsg" style="margin-top:10px; font-size:14px;"></div>
+            </div>
+
+            <div class="neon-box">
+                <h4 style="margin:0 0 10px 0;"><i class="fas fa-trophy"></i> أغنى 10 في البنك 👑</h4>
+                <div id="topUsersList" class="top-list"></div>
+            </div>
+
+            <div class="neon-box">
+                <h4 style="margin:0 0 10px 0;"><i class="fas fa-history"></i> سجل المعاملات السريعة ⚡</h4>
+                <div id="historyList" class="history-list"></div>
+            </div>
+
+            <div class="neon-box">
+                <h4 style="margin:0 0 10px 0;"><i class="fas fa-user-cog"></i> إدارة الحساب ⚙️</h4>
+                <input type="text" id="editUser" class="neon-input" style="margin: 15px auto;" placeholder="اسم المستخدم الجديد">
+                <div class="input-group">
+                    <input type="password" id="editPass" class="neon-input" placeholder="كلمة المرور الجديدة">
+                    <i class="fas fa-eye toggle-pass" onclick="togglePassVis('editPass')"></i>
+                </div>
+                <button class="neon-btn" style="padding:8px 20px; font-size:14px;" onclick="updateProfile()">حفظ التعديلات</button>
+            </div>
+            
+            <div style="text-align: center; margin-top: 10px;">
+                <a href="https://wa.me/966574360046" target="_blank" class="neon-btn" style="border-color:#ff0000; color:#ff0000; width:85%; box-shadow: 0 0 15px #ff0000;">
+                    <i class="fas fa-user-shield"></i> الادارة العليا
+                </a>
+                <a id="bankManagerBtn" href="https://wa.me/966000000000" target="_blank" class="neon-btn" style="border-color:#00ff88; color:#00ff88; width:85%; box-shadow: 0 0 15px #00ff88; margin-top: 8px;">
+                    <i class="fab fa-whatsapp"></i> <span id="bankManagerBtnText">مسئول بنك اراشي اراشي يامي</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- التبويب الأساسي: البنك (تم تحويله للثيم المتناسق المطور) -->
+        <div id="tab-bank" class="section">
+            <div class="neon-box bank-box-adapted">
+                <h3>🏦 تحويل بنكي فوري</h3>
+                <div style="position:relative; text-align: right;">
+                    <label>ابحث واختر المستلم الفوري:</label>
+                    <input type="text" id="bankSearch" class="neon-input" style="margin: 10px auto;" placeholder="🔍 ابدأ بكتابة اسم المستلم..." oninput="filterBankUsers()">
+                    <div id="bankSearchResults" class="search-results-box"></div>
+                    <input type="hidden" id="targetUser">
+                    <div id="selectedUserLabel" style="color:var(--neon-color); font-weight:bold; margin-bottom:15px; text-align:center;"></div>
+                </div>
+                <input type="number" id="bankAmount" class="neon-input" style="margin: 15px auto;" placeholder="المبلغ">
+                <input type="text" id="bankMsg" class="neon-input" style="margin: 15px auto;" placeholder="إضافة رسالة الحوالة">
+                <input type="password" id="bankPass" class="neon-input" style="margin: 15px auto;" placeholder="تأكيد كلمة مرورك">
+                <button class="neon-btn" onclick="sendMoney()">تأكيد التحويل</button>
+            </div>
+        </div>
+
+        <!-- التبويب الأساسي: المتجر -->
+        <div id="tab-shop" class="section">
+            <div class="neon-box">
+                <h3>🛒 متجر 𝑨𝑹𝑨𝑺𝑯𝑰⊰⛈️⊱𝑩𝑨𝑵𝑲</h3>
+                <input type="text" id="shopSearchInput" class="neon-input" style="margin: 10px auto;" placeholder="🔍 ابحث عن منتج أبجدياً..." oninput="renderShopItems()">
+                <div id="shopList" class="shop-grid"></div>
+            </div>
+        </div>
+
+        <!-- التبويب الأساسي الجديد: سجلاتي -->
+        <div id="tab-my-logs" class="section">
+            <div class="neon-box" style="padding: 15px 10px;">
+                <h3>📋 سجلاتي المخصصة</h3>
+                <div class="sub-tabs">
+                    <button id="subTabBtn1" class="sub-tab-btn active-sub" onclick="switchSubTab('trans')">التحويلات</button>
+                    <button id="subTabBtn2" class="sub-tab-btn" onclick="switchSubTab('orders')">الطلبات</button>
+                    <button id="subTabBtn3" class="sub-tab-btn" onclick="switchSubTab('thanks')">رسائل الشكر</button>
+                </div>
+
+                <div id="sub-ctx-trans">
+                    <div style="display:flex; justify-content: space-around; margin-bottom:10px;">
+                        <button class="neon-btn" style="padding:4px 10px; font-size:11px;" onclick="renderMyTrans('sent')">المرسلة</button>
+                        <button class="neon-btn" style="padding:4px 10px; font-size:11px;" onclick="renderMyTrans('received')">المستقبلة</button>
+                    </div>
+                    <div id="myTransList" style="text-align:right; max-height:300px; overflow-y:auto;"></div>
+                </div>
+
+                <div id="sub-ctx-orders" style="display:none;">
+                    <div id="myOrdersList" style="text-align:right; max-height:300px; overflow-y:auto;"></div>
+                </div>
+
+                <div id="sub-ctx-thanks" style="display:none;">
+                    <div id="myThanksList" style="text-align:right; max-height:300px; overflow-y:auto;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- التبويب الأساسي: الإدارة -->
+        <div id="tab-admin" class="section">
+            <div class="neon-box">
+                <h3>⚙️ الإدارة العليا ⚔️</h3>
+                <button class="neon-btn" onclick="toggleDiv('addUserDiv')">إضافة حساب</button>
+                <button class="neon-btn" onclick="toggleDiv('addShopItemDiv')">إدارة المتجر</button>
+                <button class="neon-btn" onclick="toggleDiv('userListDiv')">قائمة الأعضاء</button>
+                <button class="neon-btn" style="border-color:#ff9800; color:#ff9800;" onclick="toggleDiv('ordersAdminDiv')">طلبات الشراء 🛍️</button>
+                <button class="neon-btn" style="border-color:#00ff88; color:#00ff88;" onclick="toggleDiv('allLogsDiv')">سجل البنك العام</button>
+                <button class="neon-btn" style="border-color:#ffd700; color:#ffd700;" onclick="toggleDiv('editBannerDiv')">تعديل الإعلان 📣</button>
+                <button class="neon-btn" style="border-color:#00f2ff; color:#00f2ff;" onclick="toggleDiv('editManagerDiv')">إعدادات المسؤول 📞</button>
+                <button class="neon-btn" style="border-color:#ff00ff; color:#ff00ff;" onclick="cloneAndSyncShopToNewDB()">🔄 أداة نسخ ونقل المتجر الفورية</button>
+                
+                <div id="editManagerDiv" style="display:none; margin-top:15px; border: 1px dashed var(--neon-color); padding: 10px; border-radius: 10px;">
+                    <h4>تعديل بيانات المسؤول الخارجي</h4>
+                    <input type="text" id="mngNameIn" class="neon-input" placeholder="اسم المسؤول (مثال: مسئول اراشي اراشي يامي)">
+                    <input type="text" id="mngPhoneIn" class="neon-input" placeholder="رقم الهاتف الدولي (966500000000)">
+                    <button class="neon-btn" onclick="updateManagerSettings()">حفظ بيانات المسؤول</button>
+                </div>
+
+                <div id="editBannerDiv" style="display:none; margin-top:15px; border: 1px dashed gold; padding: 10px; border-radius: 10px;">
+                    <h4>تعديل نص البنر</h4>
+                    <input type="text" id="newBannerText" class="neon-input" placeholder="اكتب نص الإعلان الجديد...">
+                    <button class="neon-btn" onclick="updateBanner()">حفظ الإعلان</button>
+                </div>
+
+                <div id="addUserDiv" style="display:none; margin-top:10px; border: 1px dashed var(--neon-color); padding: 10px; border-radius: 10px;">
+                    <input type="text" id="nNick" class="neon-input" style="margin: 10px auto;" placeholder="اللقب">
+                    <input type="text" id="nUser" class="neon-input" style="margin: 10px auto;" placeholder="اسم المستخدم">
+                    <div class="input-group">
+                        <input type="password" id="nPass" class="neon-input" placeholder="كلمة المرور">
+                        <i class="fas fa-eye toggle-pass" onclick="togglePassVis('nPass')"></i>
+                    </div>
+                    <input type="text" id="nPhone" class="neon-input" style="margin: 10px auto;" placeholder="رقم العضو مع الرمز الدولي">
+                    <input type="number" id="nBal" class="neon-input" style="margin: 10px auto;" placeholder="الرصيد">
+                    <button class="neon-btn" onclick="addNewUser('member')">إضافة عضو</button>
+                    <button class="neon-btn" style="border-color: #ff9800; color: #ff9800;" onclick="addNewUser('admin')">إضافة مشرف ⭐</button>
+                </div>
+
+                <div id="addShopItemDiv" style="display:none; margin-top:10px;">
+                    <div style="border: 1px dashed var(--neon-color); padding: 10px; border-radius: 10px; margin-bottom: 10px; text-align: right;">
+                        <h4>إضافة سلعة جديدة للمتجر</h4>
+                        <input type="text" id="itemName" class="neon-input" style="margin: 5px auto;" placeholder="اسم السلعة">
+                        <input type="number" id="itemPrice" class="neon-input" style="margin: 5px auto;" placeholder="السعر البويني">
+                        <input type="text" id="itemDesc" class="neon-input" style="margin: 5px auto;" placeholder="وصف السلعة">
+                        
+                        <label style="font-size:12px; color:#aaa; display:block; margin-top:5px;">تحديد توفر المنتج ومدة العرض:</label>
+                        <select id="itemAvailability" class="neon-input" style="background:#111; color:#fff; margin:5px auto; width:100%;">
+                            <option value="always">دائماً</option>
+                            <option value="daily">كل يوم مرة</option>
+                            <option value="weekly">مرة في الأسبوع</option>
+                        </select>
+
+                        <label style="font-size:12px; color:#aaa; display:block; margin-top:5px;">تحديد نوع الحقول الإضافية بالنافذة:</label>
+                        <select id="itemFieldType" class="neon-input" style="background:#111; color:#fff; margin:5px auto; width:100%;">
+                            <option value="none">بدون حقول إضافية</option>
+                            <option value="sabotage">حقول تخريب لقب</option>
+                            <option value="old_new">حقول تغيير لقب</option>
+                            <option value="date">حقل تاريخ وموعد</option>
+                            <option value="target_member">حقل اختيار عضو محدد</option>
+                            <option value="text_generic">حقل نصي عادي عام</option>
+                        </select>
+                        <button class="neon-btn" onclick="addNewShopItem()">إضافة للمتجر 🛒</button>
+                    </div>
+                    <h4>إدارة حالة وظهور السلع</h4>
+                    <div id="adminShopList" style="display: flex; flex-direction: column; gap: 5px; justify-content: center;"></div>
+                </div>
+
+                <div id="ordersAdminDiv" style="display:none; margin-top:15px;">
+                    <h4>قائمة طلبات الشراء</h4>
+                    <div class="sub-tabs">
+                        <button id="admOrdBtn1" class="sub-tab-btn active-sub" onclick="filterAdminOrders('pending')">المعلقة</button>
+                        <button id="admOrdBtn2" class="sub-tab-btn" onclick="filterAdminOrders('approved')">المقبولة</button>
+                        <button id="admOrdBtn3" class="sub-tab-btn" onclick="filterAdminOrders('rejected')">المرفوضة</button>
+                    </div>
+                    <div style="overflow-x:auto;">
+                        <table id="ordersTableAdmin"></table>
+                    </div>
+                </div>
+
+                <div id="userListDiv" style="display:none; margin-top:15px;">
+                    <input type="text" id="adminUserSearch" class="neon-input" style="margin: 10px auto;" placeholder="🔍 ابحث عن عضو..." oninput="renderUsersTable()">
+                    <div style="overflow-x:auto;">
+                        <table id="usersTable"></table>
+                    </div>
+                </div>
+
+                <div id="allLogsDiv" style="display:none; margin-top:15px;">
+                    <h4>سجل البنك العام</h4>
+                    <div style="overflow-x:auto; max-height: 400px;">
+                        <table id="allTransactionsTable"></table>
+                    </div>
+                    <button class="neon-btn" style="width:100%; padding:5px; font-size:12px;" onclick="loadMoreGlobalLogs()">رؤية المزيد من السجلات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="customModal" class="custom-modal">
+        <div id="modalContentBox" class="modal-content">
+            <span class="close-modal" onclick="closeCustomModal()">&times;</span>
+            <div id="modalInnerData"></div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav" id="navBar" style="display:none">
+        <button class="nav-item active-nav" id="btn-tab-home" onclick="showTab('tab-home')"><i class="fas fa-home"></i><br>الرئيسية</button>
+        <button class="nav-item" id="btn-tab-bank" onclick="showTab('tab-bank')"><i class="fas fa-university"></i><br>البنك</button>
+        <button class="nav-item" id="btn-tab-shop" onclick="showTab('tab-shop')"><i class="fas fa-shopping-cart"></i><br>المتجر</button>
+        <button class="nav-item" id="btn-tab-my-logs" onclick="showTab('tab-my-logs')"><i class="fas fa-folder-open"></i><br>سجلاتي</button>
+        <button class="nav-item" id="adminTabBtn" onclick="showTab('tab-admin')" style="display:none"><i class="fas fa-user-shield"></i><br>الإدارة</button>
+    </nav>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-analytics.js";
+        import { getFirestore, collection, addDoc, updateDoc, doc, onSnapshot, deleteDoc, query, orderBy, limit, getDoc, setDoc, getDocs } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyA7hCLy2CSw_Dk7YsHL3N13jta0Azr7org",
+            authDomain: "arashibank-56a1f.firebaseapp.com",
+            projectId: "arashibank-56a1f",
+            storageBucket: "arashibank-56a1f.firebasestorage.app",
+            messagingSenderId: "394976568679",
+            appId: "1:394976568679:web:827f315f38af9c45e17bc2",
+            measurementId: "G-7CB0474RZK"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
+
+        // إنشاء جزيئات الخلفية لشاشة الدخول والورود للثيم البناتي
+        function createSnowParticles() {
+            const screen = document.getElementById('login-screen');
+            if(!screen) return;
+            for(let i=0; i<25; i++) {
+                let particle = document.createElement('div');
+                particle.className = 'snow-particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                let size = Math.random() * 4 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                particle.style.animationDelay = Math.random() * 2 + 's';
+                screen.appendChild(particle);
+            }
+        }
+        createSnowParticles();
+
+        // رسم قطاعات وألوان عجلة الحظ
+        const wheelPrizes = [
+            { text: "100k", val: 100000, color: "#110208" },
+            { text: "40k", val: 40000, color: "#222" },
+            { text: "200k", val: 200000, color: "#333" },
+            { text: "70k", val: 70000, color: "#444" },
+            { text: "😅🌹 حظ موفق", val: 0, color: "#050505" }
+        ];
+
+        window.setupLuckyWheelDOM = function() {
+            const wheel = document.getElementById('luckyWheel');
+            if(!wheel) return;
+            wheel.innerHTML = '';
+            const deg = 360 / wheelPrizes.length;
+            wheelPrizes.forEach((p, idx) => {
+                const seg = document.createElement('div');
+                seg.className = 'wheel-segment';
+                seg.style.transform = `rotate(${idx * deg}deg)`;
+                seg.style.backgroundColor = p.color;
+                seg.style.clipPath = "polygon(50% 50%, 0 0, 100% 0)";
+                seg.style.width = "100%";
+                seg.style.height = "100%";
+                seg.innerHTML = `<span style="transform: rotate(0deg); margin-top: 10px; display:block;">${p.text}</span>`;
+                wheel.appendChild(seg);
+            });
+        }
+
+        // الحارس الأمني للبنك المتجمد
+        const statusSnap = await getDoc(doc(db, "settings", "system"));
+        if (statusSnap.exists() && statusSnap.data().isFrozen === true) {
+            const overlay = document.createElement('div');
+            overlay.style.cssText = "position:fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:9999999; display:flex; justify-content:center; align-items:center; color:white; font-family:sans-serif;";
+            overlay.innerHTML = '<div style="text-align:center;"><h1 style="color:red; font-size: 3rem;">⚠️ البنك مغلق</h1><p>تم إيقاف الخدمات من قبل الإدارة.</p></div>';
+            document.body.appendChild(overlay);
+            throw new Error("Frozen"); 
+        }
+
+        onSnapshot(doc(db, "settings", "announcement"), (doc) => {
+            if (doc.exists()) {
+                document.getElementById('bannerText').innerText = doc.data().text;
+            }
+        });
+
+        window.updateBanner = async function() {
+            const newText = document.getElementById('newBannerText').value;
+            if(!newText) return showToast("اكتب نصاً أولاً!");
+            await setDoc(doc(db, "settings", "announcement"), { text: newText });
+            showToast("تم تحديث الإعلان بنجاح ✅");
+        }
+
+        onSnapshot(doc(db, "settings", "manager"), (docSnap) => {
+            if (docSnap.exists()) {
+                const d = docSnap.data();
+                document.getElementById('bankManagerBtnText').innerText = d.name || "مسئول بنك اراشي اراشي يامي";
+                document.getElementById('bankManagerBtn').href = "https://wa.me/" + (d.phone || "966000000000");
+                document.getElementById('loginBankManagerBtnText').innerText = d.name || "مسئول بنك اراشي اراشي يامي";
+                document.getElementById('loginBankManagerBtn').href = "https://wa.me/" + (d.phone || "966000000000");
+                document.getElementById('mngNameIn').value = d.name || "";
+                document.getElementById('mngPhoneIn').value = d.phone || "";
+            }
+        });
+
+        window.updateManagerSettings = async function() {
+            const mName = document.getElementById('mngNameIn').value;
+            const mPhone = document.getElementById('mngPhoneIn').value;
+            if(!mName || !mPhone) return showToast("الرجاء تعبئة بيانات المسؤول كاملة!");
+            await setDoc(doc(db, "settings", "manager"), { name: mName, phone: mPhone });
+            showToast("تم حفظ بيانات المسؤول بنجاح 📞");
+        }
+
+        let users = [];
+        let currentUser = null;
+        let activeOrder = null;
+        let shopItems = [];
+        let globalOrders = [];
+        let globalLogsLimit = 30;
+        let currentAdminOrdFilter = 'pending';
+        let lastLoggedBalance = 0;
+
+        window.formatNum = function(num) {
+            if (num >= 1000000) return (num / 1000000).toFixed(1) + " مليون";
+            if (num >= 1000) return (num / 1000).toFixed(1) + " ألف";
+            return num;
+        }
+
+        function animateBalanceCounter(targetValue) {
+            const balanceEl = document.getElementById('userBalance');
+            if (!balanceEl) return;
+            let startValue = lastLoggedBalance;
+            if (startValue > targetValue) startValue = 0; 
+            let duration = 1000; 
+            let startTimestamp = null;
+            
+            function step(timestamp) {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const currentValue = Math.floor(progress * (targetValue - startValue) + startValue);
+                balanceEl.innerText = currentValue.toLocaleString();
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    balanceEl.innerText = targetValue.toLocaleString();
+                    lastLoggedBalance = targetValue;
+                }
+            }
+            window.requestAnimationFrame(step);
+        }
+
+        onSnapshot(collection(db, "users"), (snapshot) => {
+            users = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            if (currentUser) {
+                currentUser = users.find(u => u.user === currentUser.user);
+                if (currentUser && currentUser.isFrozen) {
+                    document.body.innerHTML = '<div style="position:fixed; top:0; left:0; width:100%; height:100%; background:#000; display:flex; justify-content:center; align-items:center; color:white; text-align:center; padding:20px;"><div><h1 style="color:red; font-size:3rem;">❄️ تم تجميد حسابك</h1></div></div>';
+                    return;
+                }
+                loadUI();
+                loadHistory();
+                checkLoanWarning();
+            }
+            renderTopUsers();
+            renderUsersTable();
+            document.getElementById('loader').style.display = 'none';
+        });
+
+        function checkLoanWarning() {
+            const warningBox = document.getElementById('loanWarningBox');
+            if(currentUser && currentUser.loanTimestamp && (Date.now() - currentUser.loanTimestamp < 7 * 24 * 60 * 60 * 1000)) {
+                warningBox.style.display = 'block';
+            } else {
+                warningBox.style.display = 'none';
+            }
+        }
+
+        window.renderTopUsers = function() {
+            const topList = document.getElementById('topUsersList');
+            const sorted = [...users].sort((a,b) => b.balance - a.balance).slice(0, 10);
+            topList.innerHTML = sorted.map((u, index) => `
+                <div class="top-item">
+                    <span>${index + 1}. ${u.nickname}</span>
+                    <span style="color:var(--neon-color); font-weight:bold;">${formatNum(u.balance)} 🪙</span>
+                </div>
+            `).join('');
+        }
+
+        onSnapshot(collection(db, "orders"), (snapshot) => {
+            globalOrders = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            if(currentUser) {
+                const myOrders = globalOrders.filter(o => o.uid === currentUser.id).sort((a,b) => b.date - a.date);
+                const myOrder = myOrders[0];
+                const statusBox = document.getElementById('userOrderStatus');
+                const msgBox = document.getElementById('orderStatusMsg');
+                if(myOrder) {
+                    activeOrder = (myOrder.status === 'pending') ? myOrder : null;
+                    statusBox.style.display = 'block';
+                    if(myOrder.status === 'pending') {
+                        msgBox.innerHTML = `<span class="status-badge pending">طلبك (${myOrder.itemName}) قيد المراجعة حالياً... ⏳</span>`;
+                    } else if(myOrder.status === 'approved') {
+                        msgBox.innerHTML = `<span class="status-badge approved">✅ تم قبول طلبك من قبل المشرف: ${myOrder.adminName}</span>`;
+                    } else if(myOrder.status === 'rejected') {
+                        msgBox.innerHTML = `<span class="status-badge rejected">❌ تم رفض طلبك من قبل المشرف: ${myOrder.adminName}</span>`;
+                    }
+                } else {
+                    statusBox.style.display = 'none';
+                }
+                renderMyOrdersTab();
+            }
+            renderOrdersTableAdmin();
+        });
+
+        function reloadGlobalLogs() {
+            onSnapshot(query(collection(db, "transactions"), orderBy("date", "desc"), limit(globalLogsLimit)), (snapshot) => {
+                const logs = snapshot.docs.map(doc => doc.data());
+                const table = document.getElementById('allTransactionsTable');
+                table.innerHTML = `<tr><th>المرسل</th><th>المستلم</th><th>المبلغ</th><th>الرسالة</th></tr>` + logs.map(l => `
+                    <tr><td>${l.fromName}</td><td>${l.toName}</td><td style="color:#00ff88">${l.amount}</td><td>${l.msg || '-'}</td></tr>
+                `).join('');
+            });
+        }
+        reloadGlobalLogs();
+
+        window.loadMoreGlobalLogs = function() {
+            globalLogsLimit += 30;
+            reloadGlobalLogs();
+            showToast("تم تحميل المزيد من السجلات");
+        }
+
+        onSnapshot(collection(db, "shop"), (snapshot) => {
+            shopItems = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            renderShopItems();
+            renderAdminShopItems();
+        });
+
+        window.login = function() {
+            const u = document.getElementById('userIn').value.trim();
+            const p = document.getElementById('passIn').value;
+            const userObj = users.find(x => x.user === u && x.pass === p);
+            if(userObj) {
+                if (userObj.isFrozen) {
+                    showToast("حسابك مجمّد حالياً!");
+                    return;
+                }
+                currentUser = userObj;
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('main-app').style.display = 'block';
+                document.getElementById('navBar').style.display = 'flex';
+                showTab('tab-home');
+                loadUI();
+                loadHistory();
+                showToast(`أهلاً بك يا أوتاكو ${currentUser.nickname} ⚔️🤍`);
+            } else {
+                showToast("خطأ في اسم المستخدم أو كلمة المرور!");
+            }
+        }
+
+        function loadUI() {
+            document.getElementById('userNickShow').innerText = currentUser.nickname;
+            animateBalanceCounter(currentUser.balance);
+            document.getElementById('cardLast').innerText = currentUser.phone ? currentUser.phone.slice(-2) : "00";
+            if(currentUser.role === 'admin') {
+                document.getElementById('adminTabBtn').style.display = 'block';
+            } else {
+                document.getElementById('adminTabBtn').style.display = 'none';
+            }
+        }
+
+        window.showTab = function(tabId) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            
+            document.querySelectorAll('.nav-item').forEach(btn => btn.classList.remove('active-nav'));
+            const activeBtn = document.getElementById('btn-' + tabId);
+            if(activeBtn) activeBtn.classList.add('active-nav');
+            
+            if(tabId === 'tab-bank') filterBankUsers();
+        }
+
+        const card = document.getElementById('interactiveMadaCard');
+        if(card) {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left - (rect.width/2);
+                const y = e.clientY - rect.top - (rect.height/2);
+                card.style.transform = `rotateY(${x * 0.1}deg) rotateX(${-y * 0.15}deg) scale(1.02)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `rotateY(0deg) rotateX(0deg) scale(1)`;
+            });
+        }
+
+        function apply3DTiltToShopItems() {
+            setTimeout(() => {
+                document.querySelectorAll('.shop-item').forEach(item => {
+                    item.addEventListener('mousemove', (e) => {
+                        const rect = item.getBoundingClientRect();
+                        const x = e.clientX - rect.left - (rect.width / 2);
+                        const y = e.clientY - rect.top - (rect.height / 2);
+                        item.style.transform = `rotateY(${x * 0.15}deg) rotateX(${-y * 0.15}deg) translateZ(10px)`;
+                    });
+                    item.addEventListener('mouseleave', () => {
+                        item.style.transform = `rotateY(0deg) rotateX(0deg) translateZ(0)`;
+                    });
+                });
+            }, 300);
+        }
+
+        window.renderShopItems = function() {
+            const grid = document.getElementById('shopList');
+            const search = document.getElementById('shopSearchInput').value.toLowerCase();
+            const filtered = shopItems.filter(i => i.visible !== false && i.name.toLowerCase().includes(search));
+            
+            // إضافة عنصر عجلة الحظ كقسم مرتب في المتجر
+            let wheelItemHtml = `
+                <div class="shop-item" style="border-color: #ffd700;" onclick="openLuckyWheelModal()">
+                    <div style="font-size:32px; margin-bottom:5px;">🔥✨</div>
+                    <strong style="color:#ffd700; font-size:14px; display:block; height:35px; overflow:hidden;">عجلة حظ أراشي اليومية الفاخرة</strong>
+                    <p style="font-size:11px; color:#aaa; margin:2px 0; height:15px; overflow:hidden;">مرة واحدة يومياً</p>
+                    <p style="font-size:11px; color:#ccc; margin:5px 0; height:30px; overflow:hidden;">جرب حظك فوراَ واربح نقاط خيالية</p>
+                    <div class="shop-price-badge" style="box-shadow: 0 0 10px #ffd700;">50,000 بوينت</div>
+                </div>
+            `;
+
+            grid.innerHTML = wheelItemHtml + filtered.map(i => {
+                let availText = "متوفر دائماً";
+                if(i.availability === 'daily') availText = "يومياً مرة واحدة";
+                if(i.availability === 'weekly') availText = "أسبوعياً مرة واحدة";
+                
+                return `
+                    <div class="shop-item" onclick="openBuyModal('${i.id}')">
+                        <div style="font-size:32px; margin-bottom:5px;">⚔️</div>
+                        <strong style="color:white; font-size:14px; display:block; height:35px; overflow:hidden;">${i.name}</strong>
+                        <p style="font-size:11px; color:#aaa; margin:2px 0; height:15px; overflow:hidden;">${availText}</p>
+                        <p style="font-size:11px; color:#ccc; margin:5px 0; height:30px; overflow:hidden;">${i.desc || ''}</p>
+                        <div class="shop-price-badge">${i.price} بوينت</div>
+                    </div>
+                `;
+            }).join('');
+            apply3DTiltToShopItems();
+        }
+
+        // دالة فتح عجلة الحظ داخل نافذة منبثقة بروعة
+        window.openLuckyWheelModal = function() {
+            const box = document.getElementById('modalInnerData');
+            box.innerHTML = `
+                <h3 style="margin: 0 0 10px 0; color: #ffd700;"><i class="fas fa-star"></i> عجلة حظ أراشي الفاخرة</h3>
+                <p style="font-size:12px; color:#aaa; margin:5px 0;">تكلفة اللفة: 50,000 بوينت فوري</p>
+                <div class="wheel-outer-wrapper">
+                    <div class="wheel-pointer"></div>
+                    <div id="luckyWheel" class="wheel-container"></div>
+                </div>
+                <button class="neon-btn" style="border-color: #ffd700; color:#ffd700;" onclick="spinWheel()">ابدأ اللف الفوري (50k)</button>
+            `;
+            document.getElementById('customModal').style.display = 'flex';
+            setupLuckyWheelDOM();
+        }
+
+        window.cloneAndSyncShopToNewDB = async function() {
+            if(confirm("هل أنت متأكد من تفعيل أداة المزامنة الفورية؟")) {
+                try {
+                    const querySnapshot = await getDocs(collection(db, "shop"));
+                    if(querySnapshot.empty) {
+                        const defaultShop = [
+                            { name: "تغيير اللقب العادي لطيف", price: 1500, desc: "تغيير لقبك الحالي", fieldType: "old_new", availability: "always", visible: true }
+                        ];
+                        for(let item of defaultShop) { await addDoc(collection(db, "shop"), item); }
+                    }
+                    showToast("تم تفعيل وتأمين مزامنة المتجر بنجاح 🔄");
+                } catch (err) {
+                    showToast("مزامنة المتجر نشطة!");
+                }
+            }
+        }
+
+        window.openBuyModal = function(id) {
+            const item = shopItems.find(x => x.id === id);
+            if(!item) return;
+            let inputsHtml = '';
+            if(item.fieldType === 'sabotage') {
+                inputsHtml = `
+                    <input type="text" id="field1" class="neon-input" style="margin:8px auto;" placeholder="اسم الضحية المستهدفة">
+                    <input type="text" id="field2" class="neon-input" style="margin:8px auto;" placeholder="اللقب المخرب المراد فرضه">
+                `;
+            } else if(item.fieldType === 'old_new') {
+                inputsHtml = `
+                    <input type="text" id="field1" class="neon-input" style="margin:8px auto;" placeholder="اللقب القديم لإزالته">
+                    <input type="text" id="field2" class="neon-input" style="margin:8px auto;" placeholder="اللقب الجديد المطلوب تفعيله">
+                `;
+            } else if(item.fieldType === 'date') {
+                inputsHtml = `<input type="datetime-local" id="field1" class="neon-input" style="margin:8px auto;">`;
+            } else if(item.fieldType === 'target_member') {
+                inputsHtml = `<input type="text" id="field1" class="neon-input" style="margin:8px auto;" placeholder="اسم العضو المختار بالتحديد">`;
+            } else if(item.fieldType === 'text_generic') {
+                inputsHtml = `<input type="text" id="field1" class="neon-input" style="margin:8px auto;" placeholder="اكتب التفاصيل المطلوبة هنا...">`;
+            }
+
+            const box = document.getElementById('modalInnerData');
+            box.innerHTML = `
+                <h3 style="color:var(--neon-color);">${item.name}</h3>
+                <p style="font-size:13px; color:#ccc;">${item.desc || ''}</p>
+                <div style="font-size:18px; margin:10px 0; font-weight:bold; color:#00ff88;">السعر: ${item.price}🪙</div>
+                ${inputsHtml}
+                <div style="margin-top:15px;">
+                    <button class="neon-btn" style="padding:6px 20px; font-size:13px;" onclick="confirmPurchase('${item.id}')">تأكيد الشراء الفوري</button>
+                </div>
+            `;
+            document.getElementById('customModal').style.display = 'flex';
+        }
+
+        window.confirmPurchase = async function(id) {
+            const item = shopItems.find(x => x.id === id);
+            if(!item) return;
+            if(!currentUser) return showToast("الرجاء تسجيل الدخول أولاً لإجراء الشراء!");
+            if(currentUser.balance < item.price) {
+                closeCustomModal();
+                return showToast("رصيدك الحالي غير كافٍ لإتمام عملية الشراء ❌");
+            }
+            if(activeOrder) {
+                closeCustomModal();
+                return showToast("لديك طلب معلق بالفعل قيد المراجعة حالياً!");
+            }
+
+            const f1 = document.getElementById('field1') ? document.getElementById('field1').value : '';
+            const f2 = document.getElementById('field2') ? document.getElementById('field2').value : '';
+
+            await addDoc(collection(db, "orders"), {
+                uid: currentUser.id,
+                userName: currentUser.user,
+                userNickname: currentUser.nickname,
+                itemId: item.id,
+                itemName: item.name,
+                price: item.price,
+                field1: f1,
+                field2: f2,
+                status: 'pending',
+                date: Date.now(),
+                adminName: ''
+            });
+
+            await updateDoc(doc(db, "users", currentUser.id), {
+                balance: currentUser.balance - item.price
+            });
+
+            closeCustomModal();
+            showToast("تم إرسال طلب الشراء بنجاح وجاري مراجعته الإدارية ⏳");
+        }
+
+        window.spinWheel = async function() {
+            if(!currentUser) {
+                return showToast("عذراً، يجب عليك تسجيل الدخول بحسابك أولاً للعب العجلة! 🪙");
+            }
+
+            const lastSpinKey = `last_spin_${currentUser.id}`;
+            const lastSpinTime = localStorage.getItem(lastSpinKey);
+            const now = Date.now();
+            
+            if(lastSpinTime && (now - parseInt(lastSpinTime) < 24 * 60 * 60 * 1000)) {
+                return showToast("عفواً، استهلكت اليوم عجلتك، عد بكراً! 😅🌹");
+            }
+
+            if(currentUser.balance < 50000) {
+                return showToast("عذراً، رصيدك أقل من 50,000 بوينت، لا يمكنك تدوير العجلة! ❌");
+            }
+
+            const updatedFeeBal = currentUser.balance - 50000;
+            await updateDoc(doc(db, "users", currentUser.id), { balance: updatedFeeBal });
+            currentUser.balance = updatedFeeBal;
+            animateBalanceCounter(updatedFeeBal);
+
+            localStorage.setItem(lastSpinKey, now.toString());
+
+            const randomIndex = Math.floor(Math.random() * wheelPrizes.length);
+            const chosenPrize = wheelPrizes[randomIndex];
+            
+            const wheel = document.getElementById('luckyWheel');
+            if(!wheel) return;
+            const baseSpins = 6; 
+            const degreesPerPrize = 360 / wheelPrizes.length;
+            const totalDegrees = (baseSpins * 360) + (randomIndex * degreesPerPrize);
+            
+            wheel.style.transform = `rotate(${totalDegrees}deg)`;
+            showToast("جاري لف عجلة أراشي السحرية... بالتوفيق! 💸");
+            
+            setTimeout(async () => {
+                if(chosenPrize.val > 0) {
+                    const finalBal = currentUser.balance + chosenPrize.val;
+                    await updateDoc(doc(db, "users", currentUser.id), { balance: finalBal });
+                    triggerMoneyExplosion();
+                    showToast(`مبروووك! كسبت ${chosenPrize.text} بوينت مضافة لحسابك 🎉`);
+                } else {
+                    showToast("حظ موفق مرة أخرى! 😅🌹");
+                }
+                closeCustomModal();
+            }, 4100);
+        }
+
+        function triggerMoneyExplosion() {
+            let duration = 3 * 1000;
+            let end = Date.now() + duration;
+            (function frame() {
+                confetti({ particleCount: 7, angle: 60, spread: 55, origin: { x: 0 }, colors: ['#ff69b4', '#00f2ff', '#ffd700'] });
+                confetti({ particleCount: 7, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#ff69b4', '#00f2ff', '#ffd700'] });
+                if (Date.now() < end) requestAnimationFrame(frame);
+            }());
+        }
+
+        window.sendMoney = async function() {
+            const targetId = document.getElementById('targetUser').value;
+            const amount = parseInt(document.getElementById('bankAmount').value);
+            const msg = document.getElementById('bankMsg').value.trim();
+            const pass = document.getElementById('bankPass').value;
+
+            if(!targetId || !amount || amount <= 0) return showToast("الرجاء التحقق من البيانات والمبلغ الصحيح!");
+            if(pass !== currentUser.pass) return showToast("كلمة المرور لتأكيد هويتك غير صحيحة ❌");
+            if(currentUser.balance < amount) return showToast("رصيدك الحالي غير كافٍ!");
+
+            const targetUserObj = users.find(x => x.id === targetId);
+            if(!targetUserObj) return showToast("المستلم غير موجود بالنظام!");
+
+            if(currentUser.loanTimestamp && (Date.now() - currentUser.loanTimestamp < 7 * 24 * 60 * 60 * 1000)) {
+                return showToast("لا يمكن التحويل لأن لديك قرض مالي نشط لم يسدد!");
+            }
+
+            let updatedSenderBalance = currentUser.balance - amount;
+            let updatedReceiverBalance = targetUserObj.balance + amount;
+
+            await updateDoc(doc(db, "users", currentUser.id), { balance: updatedSenderBalance });
+            await updateDoc(doc(db, "users", targetUserObj.id), { balance: updatedReceiverBalance });
+
+            await addDoc(collection(db, "transactions"), {
+                fromId: currentUser.id, fromName: currentUser.nickname, toId: targetUserObj.id, toName: targetUserObj.nickname, amount: amount, msg: msg, date: Date.now()
+            });
+
+            document.getElementById('bankAmount').value = '';
+            document.getElementById('bankMsg').value = '';
+            document.getElementById('bankPass').value = '';
+            document.getElementById('selectedUserLabel').innerText = '';
+            document.getElementById('targetUser').value = '';
+
+            triggerMoneyExplosion();
+            showToast(`تم إرسال ${amount} بوينت بنجاح وتفعيل المؤثرات الحركية 💸`);
+        }
+
+        window.filterBankUsers = function() {
+            const queryText = document.getElementById('bankSearch').value.toLowerCase().trim();
+            const box = document.getElementById('bankSearchResults');
+            if(!queryText) { box.style.display = 'none'; return; }
+            const filtered = users.filter(u => u.id !== currentUser.id && (u.nickname.toLowerCase().includes(queryText) || u.user.toLowerCase().includes(queryText)));
+            if(filtered.length === 0) { box.style.display = 'none'; return; }
+            box.innerHTML = filtered.map(u => `<div class="search-res-item" onclick="selectBankTarget('${u.id}', '${u.nickname}')">${u.nickname} (@${u.user})</div>`).join('');
+            box.style.display = 'block';
+        }
+
+        window.selectBankTarget = function(id, name) {
+            document.getElementById('targetUser').value = id;
+            document.getElementById('selectedUserLabel').innerText = "المستلم المحدد: " + name;
+            document.getElementById('bankSearch').value = '';
+            document.getElementById('bankSearchResults').style.display = 'none';
+        }
+
+        let myHistory = [];
+        function loadHistory() {
+            onSnapshot(query(collection(db, "transactions"), orderBy("date", "desc")), (snapshot) => {
+                const all = snapshot.docs.map(d => d.data());
+                myHistory = all.filter(t => t.fromId === currentUser.id || t.toId === currentUser.id);
+                
+                const list = document.getElementById('historyList');
+                const quick = myHistory.slice(0, 5);
+                list.innerHTML = quick.map(t => {
+                    const isSent = t.fromId === currentUser.id;
+                    return `
+                        <div class="history-item">
+                            <span>${isSent ? 'إلى: ' + t.toName : 'من: ' + t.fromName}</span>
+                            <span class="${isSent ? 'val-minus' : 'val-plus'}">${isSent ? '-' : '+'}${t.amount} 🪙</span>
+                        </div>
+                    `;
+                }).join('');
+                renderMyTrans('sent');
+            });
+        }
+
+        window.renderMyTrans = function(type) {
+            const list = document.getElementById('myTransList');
+            let filtered = type === 'sent' ? myHistory.filter(t => t.fromId === currentUser.id) : myHistory.filter(t => t.toId === currentUser.id);
+            list.innerHTML = filtered.map(t => `
+                <div class="history-item" onclick="openDetailsModal('${t.msg || 'لا توجد رسالة مرفقة'}')">
+                    <div class="history-top">
+                        <span>${type === 'sent' ? 'المستلم: ' + t.toName : 'المرسل: ' + t.fromName}</span>
+                        <strong class="${type === 'sent' ? 'val-minus' : 'val-plus'}">${t.amount} بوينت</strong>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        window.openDetailsModal = function(msg) {
+            const box = document.getElementById('modalInnerData');
+            box.innerHTML = `<h3>تفاصيل الرسالة المرفقة الحوالة</h3><p style="padding:15px; background:#222; border-radius:10px;">${msg}</p>`;
+            document.getElementById('customModal').style.display = 'flex';
+        }
+
+        function renderMyOrdersTab() {
+            const list = document.getElementById('myOrdersList');
+            const myOrders = globalOrders.filter(o => o.uid === currentUser.id).sort((a,b) => b.date - a.date);
+            list.innerHTML = myOrders.map(o => `
+                <div class="history-item">
+                    <span>${o.itemName} (${o.price}🪙)</span>
+                    <span class="status-badge ${o.status}">${o.status === 'pending' ? 'معلق' : o.status === 'approved' ? 'مقبول' : 'مرفوض'}</span>
+                </div>
+            `).join('');
+        }
+
+        window.switchSubTab = function(tab) {
+            document.getElementById('sub-ctx-trans').style.display = tab === 'trans' ? 'block' : 'none';
+            document.getElementById('sub-ctx-orders').style.display = tab === 'orders' ? 'block' : 'none';
+            document.getElementById('sub-ctx-thanks').style.display = tab === 'thanks' ? 'block' : 'none';
+            
+            document.getElementById('subTabBtn1').classList.toggle('active-sub', tab === 'trans');
+            document.getElementById('subTabBtn2').classList.toggle('active-sub', tab === 'orders');
+            document.getElementById('subTabBtn3').classList.toggle('active-sub', tab === 'thanks');
+            if(tab === 'thanks') renderThanksTab();
+        }
+
+        function renderThanksTab() {
+            const list = document.getElementById('myThanksList');
+            const thanks = myHistory.filter(t => t.toId === currentUser.id && t.msg && (t.msg.includes("شكرا") || t.msg.includes("شكر")));
+            if(thanks.length === 0) {
+                list.innerHTML = '<p style="text-align:center; color:#666; font-size:12px;">لا توجد رسائل شكر واردة حتى الآن</p>';
+                return;
+            }
+            list.innerHTML = thanks.map(t => `
+                <div class="history-item" style="border-color: gold;">
+                    <span>💖 من العضو الفاضل: ${t.fromName}</span>
+                    <p style="margin:5px 0 0 0; color:gold; font-style:italic;">"${t.msg}"</p>
+                </div>
+            `).join('');
+        }
+
+        window.updateProfile = async function() {
+            const newNick = document.getElementById('editUser').value.trim();
+            const newPass = document.getElementById('editPass').value;
+            if(!newNick && !newPass) return showToast("الرجاء تعبئة حقل واحد على الأقل بالتعديلات!");
+            
+            let data = {};
+            if(newNick) data.nickname = newNick;
+            if(newPass) data.pass = newPass;
+
+            await updateDoc(doc(db, "users", currentUser.id), data);
+            showToast("تم تحديث بيانات ملفك الشخصي الفورية بنجاح ✅");
+            document.getElementById('editUser').value = '';
+            document.getElementById('editPass').value = '';
+        }
+
+        window.addNewUser = async function(role) {
+            const nick = document.getElementById('nNick').value.trim();
+            const user = document.getElementById('nUser').value.trim();
+            const pass = document.getElementById('nPass').value;
+            const phone = document.getElementById('nPhone').value.trim();
+            const bal = parseInt(document.getElementById('nBal').value) || 0;
+
+            if(!nick || !user || !pass || !phone) return showToast("الرجاء إكمال كافة حقول العضو الجديد!");
+            if(users.some(x => x.user === user)) return showToast("اسم المستخدم هذا مأخوذ ومسجل مسبقاً!");
+
+            await addDoc(collection(db, "users"), {
+                nickname: nick, user: user, pass: pass, phone: phone, balance: bal, role: role, isFrozen: false
+            });
+
+            showToast("تم إنشاء الحساب البنكي الجديد وحفظه بالنظام 💳");
+            document.getElementById('nNick').value = ''; document.getElementById('nUser').value = '';
+            document.getElementById('nPass').value = ''; document.getElementById('nPhone').value = '';
+            document.getElementById('nBal').value = '';
+        }
+
+        window.addNewShopItem = async function() {
+            const name = document.getElementById('itemName').value.trim();
+            const price = parseInt(document.getElementById('itemPrice').value);
+            const desc = document.getElementById('itemDesc').value.trim();
+            const fType = document.getElementById('itemFieldType').value;
+            const availability = document.getElementById('itemAvailability').value;
+
+            if(!name || !price) return showToast("اسم السلعة والسعر مطلوبان!");
+            await addDoc(collection(db, "shop"), { 
+                name: name, price: price, desc: desc, fieldType: fType, availability: availability, visible: true 
+            });
+            showToast("تم إدراج السلعة الجديدة بالمتجر بنجاح 🛒");
+            document.getElementById('itemName').value = ''; document.getElementById('itemPrice').value = ''; document.getElementById('itemDesc').value = '';
+        }
+
+        window.renderAdminShopItems = function() {
+            const list = document.getElementById('adminShopList');
+            list.innerHTML = shopItems.map(i => `
+                <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.05); padding:8px; border-radius:5px; margin-bottom:4px; font-size:13px;">
+                    <span>${i.name} (${i.price}🪙)</span>
+                    <div>
+                        <button class="neon-btn" style="padding:2px 8px; font-size:11px; border-color:${i.visible ? 'orange':'#00ff88'}" onclick="toggleShopVisibility('${i.id}', ${i.visible})">${i.visible ? 'إخفاء':'إظهار'}</button>
+                        <button class="neon-btn" style="padding:2px 8px; font-size:11px; border-color:red" onclick="deleteShopItem('${i.id}')">حذف</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        window.toggleShopVisibility = async function(id, currentVisible) {
+            await updateDoc(doc(db, "shop", id), { visible: !currentVisible });
+            showToast("تم تعديل حالة ظهور المنتج");
+        }
+
+        window.deleteShopItem = async function(id) {
+            if(confirm("هل أنت متأكد من حذف هذا المنتج نهائياً من المتجر؟")) {
+                await deleteDoc(doc(db, "shop", id));
+                showToast("تم الحذف بنجاح");
+            }
+        }
+
+        window.renderOrdersTableAdmin = function() {
+            const table = document.getElementById('ordersTableAdmin');
+            const filtered = globalOrders.filter(o => o.status === currentAdminOrdFilter).sort((a,b) => b.date - a.date);
+            
+            let html = `<tr><th>العضو</th><th>السلعة</th><th>البيانات</th><th>الإجراء</th></tr>`;
+            if(filtered.length === 0) {
+                html += `<tr><td colspan="4" style="color:#666;">لا توجد طلبات في هذا القسم حالياً</td></tr>`;
+            } else {
+                html += filtered.map(o => `
+                    <tr>
+                        <td>${o.userNickname}<br><small>@${o.userName}</small></td>
+                        <td>${o.itemName}</td>
+                        <td style="text-align:right; font-size:11px;">
+                            ${o.field1 ? 'حقل1: ' + o.field1 : ''}<br>
+                            ${o.field2 ? 'حقل2: ' + o.field2 : ''}
+                        </td>
+                        <td>
+                            ${o.status === 'pending' ? `
+                                <button class="neon-btn" style="padding:2px 6px; font-size:10px; border-color:#00ff88;" onclick="manageOrder('${o.id}', 'approved')">قبول</button>
+                                <button class="neon-btn" style="padding:2px 6px; font-size:10px; border-color:red;" onclick="manageOrder('${o.id}', 'rejected')">رفض</button>
+                            ` : `<span style="font-size:11px; color:#aaa;">بواسطة:<br>${o.adminName || 'النظام'}</span>`}
+                        </td>
+                    </tr>
+                `).join('');
+            }
+            table.innerHTML = html;
+        }
+
+        window.filterAdminOrders = function(status) {
+            currentAdminOrdFilter = status;
+            document.getElementById('admOrdBtn1').classList.toggle('active-sub', status === 'pending');
+            document.getElementById('admOrdBtn2').classList.toggle('active-sub', status === 'approved');
+            document.getElementById('admOrdBtn3').classList.toggle('active-sub', status === 'rejected');
+            renderOrdersTableAdmin();
+        }
+
+        window.manageOrder = async function(orderId, nextStatus) {
+            const order = globalOrders.find(x => x.id === orderId);
+            if(!order) return;
+            
+            if(nextStatus === 'rejected') {
+                const buyer = users.find(x => x.id === order.uid);
+                if(buyer) { await updateDoc(doc(db, "users", buyer.id), { balance: buyer.balance + order.price }); }
+            }
+
+            await updateDoc(doc(db, "orders", orderId), { status: nextStatus, adminName: currentUser.nickname });
+            showToast(`تم تحديث حالة طلب الشراء بنجاح إلى: ${nextStatus === 'approved' ? 'قبول':'رفض'} 🌟`);
+        }
+
+        window.renderUsersTable = function() {
+            const table = document.getElementById('usersTable');
+            const search = document.getElementById('adminUserSearch').value.toLowerCase().trim();
+            const filtered = users.filter(u => u.nickname.toLowerCase().includes(search) || u.user.toLowerCase().includes(search));
+
+            table.innerHTML = `<tr><th>العضو</th><th>الرصيد</th><th>الحالة والتحكم</th></tr>` + filtered.map(u => `
+                <tr>
+                    <td>${u.nickname}<br><small>@${u.user}</small></td>
+                    <td><input type="number" id="bal-edit-${u.id}" class="neon-input" style="width:80px; padding:4px; font-size:12px; margin:0;" value="${u.balance}"></td>
+                    <td>
+                        <button class="neon-btn" style="padding:2px 8px; font-size:11px; border-color:#ffd700;" onclick="saveUserBalanceAdmin('${u.id}')">حفظ</button>
+                        <button class="neon-btn" style="padding:2px 8px; font-size:11px; border-color:orange;" onclick="toggleFreezeUserAdmin('${u.id}', ${u.isFrozen})">${u.isFrozen ? 'تنشيط':'تجميد'}</button>
+                        <button class="neon-btn" style="padding:2px 8px; font-size:11px; border-color:red;" onclick="deleteUserAdmin('${u.id}')">حذف</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        window.saveUserBalanceAdmin = async function(id) {
+            const val = parseInt(document.getElementById(`bal-edit-${id}`).value);
+            if(isNaN(val)) return showToast("أدخل مبلغاً صالحاً!");
+            await updateDoc(doc(db, "users", id), { balance: val });
+            showToast("تم تحديث وحفظ رصيد العضو بنجاح ✅");
+        }
+
+        window.toggleFreezeUserAdmin = async function(id, status) {
+            await updateDoc(doc(db, "users", id), { isFrozen: !status });
+            showToast(status ? "تم إلغاء تجميد الحساب بنجاح!" : "تم تجميد حساب العضو بنجاح ❄️");
+        }
+
+        window.deleteUserAdmin = async function(id) {
+            if(confirm("هل أنت متأكد من رغبتك في حذف هذا الحساب نهائياً؟")) {
+                await deleteDoc(doc(db, "users", id));
+                showToast("تم حذف الحساب بنجاح 🗑️");
+            }
+        }
+
+        window.closeCustomModal = function() { document.getElementById('customModal').style.display = 'none'; }
+        window.togglePassVis = function(id) {
+            const input = document.getElementById(id);
+            input.type = input.type === 'password' ? 'text' : 'password';
+        }
+        window.toggleDiv = function(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // دالة تغيير الثيم مع الحفظ التلقائي في الـ localStorage لضمان عدم الضياع عند التحديث
+        window.setTheme = function(type) {
+            const body = document.getElementById('bodyTag');
+            if(type === 'girl') {
+                body.className = "theme-girl";
+                localStorage.setItem('arashi_theme', 'girl');
+                showToast("تم تفعيل الطابع الزهري البنّاتي المتكامل 🌸💕");
+            } else {
+                body.className = "";
+                localStorage.setItem('arashi_theme', 'boy');
+                showToast("تم تفعيل الطابع الأزرق الولادي السيبربانكي ⚡⚔️");
+            }
+        }
+
+        // استرجاع الثيم المحفوظ تلقائياً فور تحميل الصفحة
+        const savedTheme = localStorage.getItem('arashi_theme');
+        if(savedTheme === 'girl') {
+            document.getElementById('bodyTag').className = "theme-girl";
+        }
+
+        let isMusicPlaying = false;
+        window.toggleMusic = function() {
+            const player = document.getElementById('ytPlayer');
+            isMusicPlaying = !isMusicPlaying;
+            if(isMusicPlaying) {
+                player.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                showToast("تم تشغيل الموسيقى الخلفية للأوتـاكو 🎶");
+            } else {
+                player.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                showToast("تم إيقاف تشغيل الموسيقى");
+            }
+        }
+
+        function showToast(m) {
+            Toastify({
+                text: m, duration: 3000, gravity: "top", position: "center",
+                style: { background: "var(--neon-color)", color: "black", fontWeight: "bold", borderRadius: "10px" }
+            }).showToast();
+        }
+
+        window.onload = () => {
+            setTimeout(() => {
+                const loader = document.getElementById('loader');
+                if(loader) loader.style.display = 'none';
+            }, 1000);
+        };
+
+        let siteMinutes = 0;
+        setInterval(() => {
+            if(document.getElementById('main-app').style.display === 'block') {
+                siteMinutes++;
+                if(siteMinutes === 1) showToast("لقد بقيت في الموقع دقيقة أخرى في الموقع اذكر الله 🤍");
+                else if(siteMinutes === 2) showToast("صلى على خير الخلق محمد ﷺ ✨");
+                else if(siteMinutes === 3) {
+                    showToast("بر والديك 🕋");
+                    siteMinutes = 0;
+                }
+            }
+        }, 60000);
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>
